@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.header {
+  font-size: 28px;
+  color: #3a3a3a;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.body {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.dashboard {
+  display: flex;
+  margin-left: calc((100% - 810px) / 2);
+}
+
+.block-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#instances {
+  border: 1px solid;
+  padding: 30px;
+  overflow: auto;
+  border-radius: 15px;
+  margin-right: 20px;
+  width: 450px;
+  min-height: 400px;
+  max-height: 600px;
+}
+
+.instance-list {
+  list-style: none;
+  padding: 0;
+}
+
+.instance-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.instance-item span {
+  padding: 3px 0;
+}
+
+.instance-status {
+  display: flex;
+}
+
+.status {
+  width: 15px;
+  height: 15px;
+  background-image: url(img/stopped.png);
+  background-position: center;
+  background-size: cover;
+  left: 70px;
+  position: absolute;
+}
+
+.status::after {
+  content: 'Stopped';
+  position: absolute;
+  font-size: 14px;
+  font-weight: 700;
+  top: 0;
+  left: 20px;
+}
+
+.instance-item.started .status {
+  background-image: url(img/running.png);
+}
+
+.instance-item.started .status::after {
+  content: 'Running';
+}
+
+.instance-actions {
+  display: flex;
+  position: relative;
+}
+
+.status-icon {
+  width: 18px;
+  height: 18px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.stop-start {
+  background-image: url(img/play.png);
+}
+
+.stop-start:hover {
+  background-image: url(img/play-hover.png);
+}
+
+.instance-item.started .stop-start {
+  background-image: url(img/stop.png);
+}
+
+.instance-item.started .stop-start:hover {
+  background-image: url(img/stop-hover.png);
+}
+
+.close {
+  background-image: url(img/close.png);
+}
+
+.close:hover {
+  background-image: url(img/close-hover.png);
+}
+
+.new-instance {
+  color: black;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.new-instance:hover {
+  color: green;
+}
+
+.messanger-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 30px;
+  width: 450px;
+  min-height: 400px;
+  max-height: 600px;
+}
+
+#list-msg {
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+  padding-right: 15px;
+  font-size: 12px;
+}
+
+.list-item-msg {
+  display: flex;
+  padding: 10px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #000000;
+}
+
+.list-item-msg.active {
+  align-items: flex-end;
+}
+
+.active > .list-item-head {
+  color: #ff0000;
+}
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map*/
